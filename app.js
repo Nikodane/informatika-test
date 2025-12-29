@@ -126,12 +126,19 @@ restartBtn.onclick = () => {
   initGame();
   render();
 
-  /* прокрутка ВВЕРХ */
-  window.scrollTo({
+  // 100% прокрутка вверх (ПК + телефон)
+  document.documentElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  document.body.scrollTo({
     top: 0,
     behavior: "smooth"
   });
 };
 
+
 /* ===== START ===== */
 render();
+
