@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Информатика · Тест</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="header">
+    <div class="header-top">
+      <h1>Информатика · Тест</h1>
+      <button id="restartBtn">Начать заново</button>
+    </div>
+
+    <div class="stats">
+      <span id="score">0 / 155</span>
+      <span id="errors">Ошибки: 0</span>
+    </div>
+
+    <!-- ДВЕ ШКАЛЫ -->
+    <div class="progress">
+      <div id="progressCorrect"></div>
+      <div id="progressWrong"></div>
+    </div>
+  </header>
+
+  <main id="quiz"></main>
+
+</div>
+
+<script src="questions/part1.js"></script>
+<script src="questions/part2.js"></script>
+<script src="questions/part3.js"></script>
+<script src="questions/part4.js"></script>
+<script src="questions.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>
