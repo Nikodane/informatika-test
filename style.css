@@ -133,3 +133,60 @@ body {
     padding: 6px;
   }
 }
+/* кнопка ответа */
+.answers button {
+  transition:
+    transform 0.12s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* эффект нажатия */
+.answers button:active {
+  transform: scale(0.97);
+}
+
+/* временный эффект клика */
+.answers button.clicked {
+  transform: scale(0.95);
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.08);
+}
+
+/* плавное появление правильного */
+.answers button.correct {
+  animation: correctAnim 0.35s ease forwards;
+}
+
+/* плавное появление неправильного */
+.answers button.wrong {
+  animation: wrongAnim 0.35s ease forwards;
+}
+
+@keyframes correctAnim {
+  0% {
+    background-color: #1f2937;
+  }
+  60% {
+    background-color: #1fa34a;
+    transform: scale(1.02);
+  }
+  100% {
+    background-color: #16a34a;
+    transform: scale(1);
+  }
+}
+
+@keyframes wrongAnim {
+  0% {
+    background-color: #1f2937;
+  }
+  60% {
+    background-color: #dc2626;
+    transform: scale(1.02);
+  }
+  100% {
+    background-color: #b91c1c;
+    transform: scale(1);
+  }
+}
+
